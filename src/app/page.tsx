@@ -13,7 +13,7 @@ const page = () => {
           className="w-full h-auto mt-20"
         />
       </div>
-      <h1 className='text-[32px] font-bold text-center mt-10'>Browse The Range</h1>
+      <h1 className='text-[#333333] text-[32px] font-bold text-center mt-10'>Browse The Range</h1>
       <p className='text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <div className='flex flex-wrap items-center justify-center mt-16 gap-8'>
         <div className='flex flex-col items-center max-w-[300px] sm:max-w-[100%]'>
@@ -51,7 +51,7 @@ const page = () => {
       </div>
 
       <div>
-        <h1 className='text-[40px] text-center font-bold mt-14 mb-6'>Our Products</h1>
+        <h1 className='text-[#333333] text-[40px] text-center font-bold mt-14 mb-6'>Our Products</h1>
 
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mx-auto max-w-screen-xl'>
           <div className='w-[285px] h-[446px] bg-[#F4F5F7] mx-auto '>
@@ -197,7 +197,7 @@ const page = () => {
 
         <div className='h-auto bg-[#FCF8F3] mt-10 flex flex-col lg:flex-row items-center justify-around'>
           <div className='text-center lg:text-left px-6 lg:px-0'>
-            <h1 className='text-[32px] sm:text-[36px] md:text-[40px] font-bold w-[90%] md:w-[422px]'>
+            <h1 className='text-[#333333] text-[32px] sm:text-[36px] md:text-[40px] font-bold w-[90%] md:w-[422px]'>
               50+ Beautiful rooms inspiration
             </h1>
             <p className='text-[14px] sm:text-[16px] mt-4 md:mt-6 w-[90%] md:w-[368px]'>

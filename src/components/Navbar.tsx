@@ -52,7 +52,7 @@ const Navbar = () => {
       {/* Dropdown Menu */}
       <div className="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:block hidden">
         <ul>
-          <li className="px-4 py-2 hover:bg-gray-100">SignUp</li>
+        <Link href={"/signup"}><li className="px-4 py-2 hover:bg-gray-100">SignUp</li></Link>
           <li className="px-4 py-2 hover:bg-gray-100">Logout</li>
           <li className="px-4 py-2 hover:bg-gray-100">Settings</li>
         </ul>
