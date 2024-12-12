@@ -8,21 +8,21 @@ const AsgaardPage = () => {
             {/* Navigation Bar */}
             <nav className="bg-[#F9F1E7] h-24 mt-20 flex items-center gap-8 pl-20">
                 <ul className="flex items-center gap-2 list-none">
-                    <li className="text-[#9F9F9F]">Home</li>
+                    <a href='/'><li className="text-[#9F9F9F]">Home</li></a>
                     <Image
                         src="/images/black-arr.png"
                         alt="arrow"
                         width={20}
                         height={20}
                     />
-                    <li className="text-[#9F9F9F]">Shop</li>
+                     <a href='/shop'><li className="text-[#9F9F9F]">Shop</li></a>
                     <Image
                         src="/images/black-arr.png"
                         alt="arrow"
                         width={20}
                         height={20}
                     />
-                    <li className="text-[#9F9F9F]">Asgaard Sofa</li>
+                     <a href='/asgaard-sofa'><li className="text-[#9F9F9F]">Asgaard Sofa</li></a>
                 </ul>
             </nav>
 
@@ -91,24 +91,25 @@ const AsgaardPage = () => {
                     {/* Color Selection */}
                     <h2 className="mt-14 text-[#9F9F9F]">Color:</h2>
                     <div className="flex items-center gap-3 mt-4">
-                        <div className="w-8 h-8 bg-[#816DFA] rounded-full"></div>
-                        <div className="w-8 h-8 bg-black rounded-full"></div>
-                        <div className="w-8 h-8 bg-[#B88E2F] rounded-full"></div>
+                        <div className="w-8 h-8 bg-[#816DFA] rounded-full hover:scale-125"></div>
+                        <div className="w-8 h-8 bg-black rounded-full hover:scale-125"></div>
+                        <div className="w-8 h-8 bg-[#B88E2F] rounded-full hover:scale-125"></div>
                     </div>
 
                     {/* Quantity and Actions */}
                     <div className="flex flex-col sm:flex-row items-center gap-3 mt-6">
-                        <div className="flex items-center border border-black rounded-2xl w-[123px] h-[64px]">
+                        <div className="flex items-center border border-black rounded-2xl w-[123px] h-[64px] hover:bg-[#B88E2F] hover:text-white">
                             <button className="px-3">-</button>
                             <span className="px-4">1</span>
                             <button className="px-3">+</button>
                         </div>
                        
-                        <button className="w-[123px] h-[64px] rounded-2xl border border-black mt-4 sm:mt-0 sm:ml-3">
-                            Add To Cart
+                        <button className="w-[120px] h-[64px] rounded-lg border border-black mt-4 sm:mt-0 sm:ml-3 bg-black text-white font-medium shadow-lg transition-transform transform hover:scale-105 hover:bg-gray-800 active:scale-95">
+                        Add To Cart
                         </button>
+
                     
-                        <button className="w-52 h-16 bg-transparent text-black rounded-2xl border border-black flex items-center justify-center gap-2 mt-4 sm:mt-0 sm:ml-3">
+                        <button className="w-52 h-16 bg-transparent text-black rounded-2xl border border-black flex items-center justify-center gap-2 mt-4  hover:bg-[#B88E2F] hover:text-white sm:mt-0 sm:ml-3 ">
                             <span>+</span>
                             <span>Compare</span>
                         </button>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Feature from '@/components/Feature';
 
 const ContactPage = () => {
     return (
@@ -75,7 +76,7 @@ const ContactPage = () => {
                     </button>
                 </div>
             </div>
-
+            <Feature/>
         </>
     );
 };

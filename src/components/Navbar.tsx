@@ -38,20 +38,38 @@ const Navbar = () => {
       </div>
 
       <div className="hidden sm:flex items-center space-x-4">
-        <Image
-          src={"/images/contact-icon.svg"}
-          alt="contact"
-          width={24}
-          height={24}
-          className="w-6 h-6 cursor-pointer hover:opacity-80"
-        />
+
+           <div className="relative group">
+      {/* Image as the dropdown trigger */}
+      <Image
+        src="/images/contact-icon.svg"
+        alt="contact"
+        width={24}
+        height={24}
+        className="w-6 h-6 cursor-pointer hover:opacity-80"
+      />
+
+      {/* Dropdown Menu */}
+      <div className="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:block hidden">
+        <ul>
+          <li className="px-4 py-2 hover:bg-gray-100">SignUp</li>
+          <li className="px-4 py-2 hover:bg-gray-100">Logout</li>
+          <li className="px-4 py-2 hover:bg-gray-100">Settings</li>
+        </ul>
+      </div>
+    </div>
+          
+        <form action='' className="relative w-max mx-auto">
+          <input type="search" name="search" id="search" className="relative peer z-10 bg-transparent w-12 h-12 rounded-full border cursor-pointer outline-none pl-12
+          focus:w-full focus:border-[#B88E2F] focus:cursor-text focus:pl-16 focus:pr-4" placeholder="Search..."/>
         <Image
           src={"/images/search-icon.svg"}
           alt="search"
           width={24}
           height={24}
-          className="w-6 h-6 cursor-pointer hover:opacity-80"
+          className="w-6 h-6 cursor-pointer absolute inset-y-0 my-auto px-3.4 ml-3 hover:opacity-80"
         />
+        </form>
         <Link href={"/asgaard-sofa"}>
         <Image
           src={"/images/heart-icon.svg"}

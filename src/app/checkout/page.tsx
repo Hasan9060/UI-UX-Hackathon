@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Feature from '@/components/Feature'
 
 const CheckOutPage = () => {
     return (
@@ -177,6 +178,7 @@ const CheckOutPage = () => {
                     </div>
                 </div>
             </div>
+            <Feature/>
         </>
     )
 }

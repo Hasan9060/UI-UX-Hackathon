@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Feature from '@/components/Feature'
 
 const ShopPage = () => {
     return (
@@ -311,7 +312,9 @@ const ShopPage = () => {
                 <button className='w-[60px] h-[60px] bg-[#F9F1E7] flex items-center justify-center hover:bg-[#B88E2F] hover:text-white'>3</button>
                 <button className='w-[60px] h-[60px] bg-[#F9F1E7] flex items-center justify-center hover:bg-[#B88E2F] hover:text-white'>Next</button>
             </div>
+            <Feature/>
         </>
+        
     )
 }
 

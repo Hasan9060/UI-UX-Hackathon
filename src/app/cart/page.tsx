@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Feature from '@/components/Feature'
 
 const CartPage = () => {
     return (
@@ -65,6 +66,7 @@ const CartPage = () => {
                 </div>
 
             </div>
+            <Feature/>
 
         </>
 

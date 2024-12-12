@@ -25,7 +25,7 @@ const BlogPage = () => {
             alt="laptop-img"
             width={817}
             height={500}
-            className="mt-8 lg:mt-28 w-full"
+            className="mt-8 lg:mt-28 w-full hover:scale-105"
           />
           <div className="flex items-center gap-2 lg:gap-4 mt-2">
             <Image src={"/images/user.svg"} alt="user-img" width={20} height={20} />
@@ -49,11 +49,11 @@ const BlogPage = () => {
             alt="drawing-img"
             width={817}
             height={500}
-            className="mt-14 w-full"
+            className="mt-14 w-full hover:scale-105"
           />
-          <div className="flex items-center gap-2 lg:gap-4 mt-2">
+          <div className="flex items-center gap-2 lg:gap-4 mt-2  ">
             <Image src={"/images/user.svg"} alt="user-img" width={20} height={20} />
-            <h3 className="text-[#9F9F9F] text-sm lg:text-base">Admin</h3>
+            <h3 className="text-[#9F9F9F]  text-sm lg:text-base">Admin</h3>
             <Image src={"/images/briefcase.svg"} alt="briefcase-img" width={20} height={20} />
             <h3 className="text-[#9F9F9F] text-sm lg:text-base">14 Oct 2022</h3>
             <Image src={"/images/wood.svg"} alt="wood-img" width={20} height={20} />
@@ -73,7 +73,7 @@ const BlogPage = () => {
             alt="books-img"
             width={817}
             height={500}
-            className="mt-14 w-full"
+            className="mt-14 w-full hover:scale-105"
           />
           <div className="flex items-center gap-2 lg:gap-4 mt-2">
             <Image src={"/images/user.svg"} alt="user-img" width={20} height={20} />
@@ -91,13 +91,22 @@ const BlogPage = () => {
           </p>
           <span className="border-b border-black text-sm">Read More</span>
         </div>
+        
 
         {/* Right Section */}
         <div className="lg:w-1/2 lg:mr-20 lg:ml-20 mt-10 lg:mt-28">
-          {/* Search Bar */}
-          <div className="flex items-center justify-end w-full lg:w-[311px] h-[58px] border px-4 border-[#9F9F9F] rounded-md">
-            <Image src={"/images/research.svg"} alt="search-img" width={20} height={20} />
-          </div>
+          {/* Search Bar */}  
+            <div className="flex items-center justify-end w-full lg:w-[311px] h-[58px] border px-4 border-[#9F9F9F] rounded-md">
+      <input
+        type="text"
+        placeholder="Search..."
+        className="flex-grow outline-none bg-transparent text-gray-700 placeholder-gray-400"
+      />
+      <button className="text-gray-500 hover:text-black">
+      <Image src={"/images/research.svg"} alt="search-img" width={20} height={20} />
+        </button>
+        </div>
+        
 
           {/* Categories */}
           <h1 className="text-[20px] lg:text-[24px] font-semibold mt-10">Categories</h1>
@@ -115,13 +124,13 @@ const BlogPage = () => {
               </div>
             ))}
           </div>
+          
 
           <div>
-
   <h1 className="text-[24px] font-semibold mb-8">Recent Posts</h1>
-  <div className="space-y-6">
+  <div className="space-y-6 ">
     {[
-      { src: '/images/pro1.png', title: 'Going all-in with millennial design' },
+      { src: '/images/pro1.png', title: 'Going all-in with millennial design', } ,
       { src: '/images/pro2.png', title: 'Exploring new ways of decorating' },
       { src: '/images/pro3.png', title: 'Handmade pieces that took time to make' },
       { src: '/images/pro4.png', title: 'Modern home in Milan' },
@@ -142,11 +151,15 @@ const BlogPage = () => {
       </div>
     ))}
   </div>
+  
 </div>
 
 
-      {/* Pagination */}
-      <div className="flex items-center justify-center gap-2 lg:gap-8 mt-10 lg:mt-14">
+    
+      </div>
+      </div>
+       {/* Pagination */}
+       <div className="flex items-center justify-center gap-2 lg:gap-8 mt-10 lg:mt-14">
         {['1', '2', '3', 'Next'].map((item) => (
           <div
             key={item}
@@ -156,8 +169,6 @@ const BlogPage = () => {
             {item}
           </div>
         ))}
-      </div>
-      </div>
       </div>
     </>
   );
