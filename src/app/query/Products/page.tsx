@@ -8,9 +8,9 @@ import Link from "next/link";
 import Swal from "sweetalert2";
 
 const sanity = sanityClient({
-  projectId: "2srh4ekv",
-  dataset: "productions",
-  token: "skz6lWFJkAgpfrjXgwK8Tb6UBsTpRcSwzsQawON5Qps118XQdODrtVLdyXySTgJqC7rhPUKAOzb9prGs2aORcV0IICFN6pLKCLW2G0P7u5rExc8E92fzYp0UMuro6VpCzm51svtpWMCniHWaEiZAeJApDrYyIXgO5Uar4GLM2QPxFsswwZnU",
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
+  token: process.env.NEXT_PUBLIC_SANITY_TOKEN!,
   useCdn: true,
 });
 
@@ -53,14 +53,16 @@ const ProductCards: React.FC = () => {
         "slug": slug.current
       }`;
 
-      const data = await sanity.fetch(query);
+      const data: Project[] = await sanity.fetch(query);
 
-      // Filter out empty categories and sort them alphabetically
+      // Extract unique categories and sort them
       const allCategories: string[] = Array.from(
-        new Set(data.map((product: Project) => product.category).filter(Boolean)) as unknown as string[]
+        new Set<string>(
+          data.map((product) => product.category).filter(Boolean)
+        )
       );
-      const sortedCategories: string[] = ["All", ...allCategories.sort()];
-      setCategories(sortedCategories);      
+
+      setCategories(["All", ...allCategories.sort()]);
       setProducts(data);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -71,22 +73,21 @@ const ProductCards: React.FC = () => {
     fetchProducts();
   }, []);
 
-  const handleAddToCart = (product: any) => {
+  const handleAddToCart = (product: Project) => {
     addToCart({ ...product, quantity: 1 });
 
-    // SweetAlert2 notification
     Swal.fire({
       title: "Added to Cart!",
       text: `${product.title} has been added to your cart.`,
       icon: "success",
       showConfirmButton: false,
-      timer: 3000, // Auto-close after 3 seconds
-      toast: true, // Show as a toast
-      position: "top-end", // Position at the top-right corner
-      background: "#F9F1E7", // Custom background color
-      iconColor: "#816DFA", // Custom icon color
+      timer: 3000,
+      toast: true,
+      position: "top-end",
+      background: "#F9F1E7",
+      iconColor: "#816DFA",
       customClass: {
-        popup: "shadow-lg rounded-md", // Custom class for popup
+        popup: "shadow-lg rounded-md",
       },
     });
   };
@@ -96,7 +97,7 @@ const ProductCards: React.FC = () => {
       ? products
       : products.filter((product) => product.category === selectedCategory);
 
-  // Pagination Logic
+  // Pagination logic
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
@@ -129,7 +130,7 @@ const ProductCards: React.FC = () => {
       </div>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
         {currentProducts.map((product) => (
           <div
             key={product._id}
