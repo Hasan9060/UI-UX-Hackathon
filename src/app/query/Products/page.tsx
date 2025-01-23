@@ -56,8 +56,11 @@ const ProductCards: React.FC = () => {
       const data = await sanity.fetch(query);
 
       // Filter out empty categories and sort them alphabetically
-      const allCategories = Array.from(new Set(data.map((product: Project) => product.category).filter(Boolean)));
-      const sortedCategories = ["All", ...allCategories.sort()]; // Add new categories and sort
+      const allCategories = Array.from(
+        new Set(data.map((product: Project) => product.category).filter(Boolean))
+      ) as string[];
+      
+      const sortedCategories = ["All", ...allCategories.sort()];
       setCategories(sortedCategories);
       setProducts(data);
     } catch (error) {
