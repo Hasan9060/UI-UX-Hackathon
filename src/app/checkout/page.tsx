@@ -94,7 +94,7 @@ const CheckOutPage = () => {
                             <input
                                 placeholder="Western Province"
                                 type="text"
-                                className="w-full h-full border border-black rounded-md pl-4 pr-10 text-[#9F9F9F]"
+                                className="w-full h-full border border-black rounded-md pl-4 pr-10 text-[#333333]"
                             />
                             <Image
                                 src={"/images/arr-ico.png"}
@@ -138,7 +138,7 @@ const CheckOutPage = () => {
                         <input
                             placeholder="Additional information"
                             type="text"
-                            className="w-full lg:w-[453px] h-[75px] border border-black rounded-md text-[#9F9F9F] pl-4"
+                            className="w-full lg:w-[453px] h-[75px] border border-black rounded-md text-[#333333] pl-4"
                         />
                     </div>
 
@@ -147,7 +147,7 @@ const CheckOutPage = () => {
                         <div className="flex items-start justify-between">
                             <div className="flex flex-col gap-3">
                                 <h2 className="text-[24px] font-semibold">Product</h2>
-                                <p className="text-[#9F9F9F]">Asgaard sofa <span className="text-black">X 1</span></p>
+                                <p className="text-[#333333]">Asgaard sofa <span className="text-black">X 1</span></p>
                                 <span className="font-semibold">Subtotal</span>
                                 <span className="font-semibold">Total</span>
                             </div>
@@ -164,12 +164,12 @@ const CheckOutPage = () => {
                                 <div className="bg-black rounded-full w-[14px] h-[14px]"></div>
                                 <h1 className="text-[20px] font-semibold">Direct Bank Transfer</h1>
                             </div>
-                            <p className="text-[#9F9F9F] mt-2">
+                            <p className="text-[#333333] mt-2">
                                 Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
                             </p>
                             <div className="flex items-center gap-3 mt-6">
                                 <div className="border border-[#9F9F9F] rounded-full w-[14px] h-[14px]"></div>
-                                <h1 className="text-[18px] font-semibold text-[#9F9F9F]">Cash On Delivery</h1>
+                                <h1 className="text-[18px] font-semibold text-[#333333]">Cash On Delivery</h1>
                             </div>
                         </div>
                         <div className="mt-10">

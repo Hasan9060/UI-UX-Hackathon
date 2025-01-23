@@ -2,6 +2,8 @@
 const config = {
   plugins: {
     tailwindcss: {},
+    'postcss-preset-env': {},  // Optional, for additional features
+    'cssnano': {},             // Minifies the CSS
   },
 };
 

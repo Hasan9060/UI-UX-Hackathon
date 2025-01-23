@@ -9,19 +9,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h1 className="text-[20px] sm:text-[24px] font-bold">Funiro.</h1>
-            <p className="mt-4 text-[#9F9F9F] max-w-[] text-sm sm:text-base">
+            <p className="mt-4 text-[#333333] max-w-[] text-sm sm:text-base">
               400 University Drive Suite 200 Coral 
             </p>
-            <p className="text-[#9F9F9F] max-w-[] text-sm sm:text-base">
+            <p className="text-[#333333] max-w-[] text-sm sm:text-base">
             Gables,
             </p>
-            <p className="text-[#9F9F9F] max-w-[] text-sm sm:text-base">
+            <p className="text-[#333333] max-w-[] text-sm sm:text-base">
             FL 33134 USA
             </p>
           </div>
 
           <div className="flex flex-col gap-3">
-            <h1 className="text-[#9F9F9F] text-[14px] sm:text-[16px]">Links</h1>
+            <h1 className="text-[#333333] text-[14px] sm:text-[16px]">Links</h1>
             <Link href="/" className="font-semibold text-[#333] mt-6 text-sm sm:text-base">
               Home
             </Link>
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col gap-3">
-            <h1 className="text-[#9F9F9F] text-[14px] sm:text-[16px]">Help</h1>
+            <h1 className="text-[#333333] text-[14px] sm:text-[16px]">Help</h1>
             <Link href="/payment-options" className="font-semibold text-[#333] mt-6 text-sm sm:text-base">
               Payment Options
             </Link>
@@ -50,10 +50,10 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col items-center gap-4">
-            <h1 className="text-[#9F9F9F] text-[14px] sm:text-[16px]">Newsletter</h1>
-            <h3 className="text-[#9F9F9F] border-b border-black text-sm sm:text-base">
+            <h1 className="text-[#333333] text-[14px] sm:text-[16px]">Newsletter</h1>
+            <h2 className="text-[#333333] border-b border-black text-sm sm:text-base">
               Enter Your Email Address
-            </h3>
+            </h2>
             <input
               type="email"
               className="border-b border-black text-sm text-center p-2 mt-2 w-full max-w-xs sm:max-w-sm"
